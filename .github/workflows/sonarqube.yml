@@ -41,10 +41,13 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      - name: ECHO PWD
+        run:
+          echo PWD &&  echo ${GITHUB_WORKSPACE}
       - name: Maven clean
         run: 
-          cd WebGoat
-          mvn clean package
+          cd WebGoat && mvn clean package
+          
           
       - name: Analyze with SonarQube
       
