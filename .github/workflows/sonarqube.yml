@@ -41,6 +41,10 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      - name: Install Maven
+        uses: yuzhiyongcn/setup-maven@v1.0.0
+        with:
+          maven-version: 3.9.3
       - name: ECHO PWD
         run:
           echo PWD &&  echo ${GITHUB_WORKSPACE}
